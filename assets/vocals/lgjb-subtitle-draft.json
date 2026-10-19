@@ -1,0 +1,905 @@
+{
+  "format": "yiren-builtin-vocal-reference",
+  "version": 1,
+  "subtitleRevision": "v0.9-all-dialogue-draft",
+  "title": "龙宫借宝 · 全折原场唱白",
+  "sourceVideo": "https://shadow.caa.edu.cn/py/video/160_tsyyjt/lgjb_a.mp4",
+  "sourceProgramme": "https://shadow.caa.edu.cn/api/programme.json?id=886",
+  "sourceEnsemble": "唐山演艺集团有限公司皮影剧团",
+  "humanAuditoryReview": false,
+  "transcriptStatus": "machine-context-draft",
+  "sourceAudioUnchanged": true,
+  "note": "各场按原片顺序选段。对白均有真实音轨；原片唱白相间，不能称全部实唱。疑字及句界未人工听校。龙王取棒前的持续指稳为无对白身段操作。",
+  "clips": [
+    {
+      "id": "caa886earlydragonopening",
+      "role": "dragon",
+      "section": "arrival",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 60,
+      "end": 73.2,
+      "title": "龙王开场自述",
+      "kind": "真人唱段候选 · 疑字初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 7.8,
+          "text": "东海〔太平？〕〔数十载？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "太平/看殿近音未定",
+            "数十载/数十来/水族在未定"
+          ],
+          "gesture": "announce"
+        },
+        {
+          "start": 7.8,
+          "end": 13.2,
+          "text": "〔唯？〕本尊〔乐在怀？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "唯/惟/为为同音待校",
+            "乐在怀/乐采怀近音待校"
+          ],
+          "gesture": "offer"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "直接复用v10明确标疑的开场初稿，未因多次识别而升格为核定原词。",
+        "machineCandidates": [],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "caa886earlywukongintro",
+      "role": "wukong",
+      "section": "arrival",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 428.1,
+      "end": 433.3,
+      "title": "悟空自报家门",
+      "kind": "真人念白 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 3.2,
+          "text": "俺老孙〔就住在？〕花果山上",
+          "confidence": "medium",
+          "uncertainWords": [
+            "就住在/就在/住在未定"
+          ],
+          "gesture": "announce"
+        },
+        {
+          "start": 3.2,
+          "end": 5.2,
+          "text": "〔法名？〕孙悟空",
+          "confidence": "low",
+          "uncertainWords": [
+            "法名/大名/化名未定"
+          ],
+          "gesture": "salute"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "复用v10多模型初校，不把法名的剧情合理性当作本片逐字真值。",
+        "machineCandidates": [],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "caa886earlywukongrequest",
+      "role": "wukong",
+      "section": "request",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 433.3,
+      "end": 438.85,
+      "title": "悟空求借兵器",
+      "kind": "真人念白 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 2.96,
+          "text": "只因手中缺少〔趁手？〕的兵器",
+          "confidence": "medium",
+          "uncertainWords": [
+            "趁手/称手为同音字形，无法据语音定剧本用字"
+          ],
+          "gesture": "offer"
+        },
+        {
+          "start": 2.96,
+          "end": 5.55,
+          "text": "特地向你来借一件〔使用？〕",
+          "confidence": "medium",
+          "uncertainWords": [
+            "使用/使唤未定"
+          ],
+          "gesture": "salute"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "不以新编台词替换原声；保留已有多模型交集与疑字。",
+        "machineCandidates": [],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "caa886earlydragonreply",
+      "role": "dragon",
+      "section": "request",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 438.85,
+      "end": 442.4,
+      "title": "龙王答应取器",
+      "kind": "真人念白 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 3.55,
+          "text": "哦，我当什么事。",
+          "confidence": "medium",
+          "uncertainWords": [
+            "‘哦’的起点在旧模型438.68/438.72秒附近；此处以现有悟空段末438.85秒为衔接点，非人工听定。"
+          ],
+          "gesture": "close"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "新补龙王短答复；有双模型近音支持，仍无人工听校。",
+        "machineCandidates": [
+          "本轮large短窗：我當什麼事",
+          "本轮small短窗：哦 我当什么事 拿一把连个盆刀来",
+          "旧large：哦 我当什么师兄",
+          "旧small：哦／我当什么师"
+        ],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "caa886earlydragonfetch",
+      "role": "dragon",
+      "section": "trial",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 442.4,
+      "end": 445.08,
+      "title": "命取第一件兵器",
+      "kind": "真人念白 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 2.68,
+          "text": "拿一把〔连环刀？〕来。",
+          "confidence": "low",
+          "uncertainWords": [
+            "刀名未定：连环刀为情节近音初校，模型分别为连了门刀/连个盆刀/连纹刀，不是同版影卷实证。"
+          ],
+          "gesture": "point"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "适合放在试第一件兵器之前的龙王发令；不要把此句解释为已找到金箍棒，也不要据此称九股叉/方天画戟原声。",
+        "machineCandidates": [
+          "本轮large：拿一把連了門刀來",
+          "本轮small：拿一把连个盆刀来",
+          "旧large：拿一把连纹刀来",
+          "旧small：拿一把连了门刀来"
+        ],
+        "notes": ""
+      },
+      "gateMode": "turn",
+      "beat": "call"
+    },
+    {
+      "id": "lgwktrialsecond",
+      "role": "wukong",
+      "section": "trial",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 537.4,
+      "end": 541.7,
+      "title": "再试仍嫌轻",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 4.3,
+          "text": "还是轻了，再拿一个〔重的？〕来吧！",
+          "confidence": "medium",
+          "uncertainWords": [
+            "重的"
+          ],
+          "rawEvidence": [
+            "537–543 small 0.5–4.5：還是清了!再拿一個重來吧!",
+            "535–565 large 2–6：還是輕了,再拿一個正宅吧"
+          ],
+          "gesture": "refuse"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "535/537秒悟空持长器腾跃，539/541秒落地并向龙王伸手；句中嫌轻、要求再取符合持器人物，龙王高踞左侧。",
+        "machineCandidates": [],
+        "notes": "语音近音规范清→轻；重的为语境补足，保留疑字。"
+      },
+      "gateMode": "turn",
+      "beat": "response"
+    },
+    {
+      "id": "lgdrguide",
+      "role": "dragon",
+      "section": "trial",
+      "trial": 1,
+      "file": "museum-original",
+      "start": 545,
+      "end": 555.6,
+      "title": "引往海藏",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 1,
+          "text": "有了！",
+          "confidence": "medium",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "535–565 large 10–11：有量",
+            "545–556 small：有了…"
+          ],
+          "gesture": "announce"
+        },
+        {
+          "start": 1,
+          "end": 4,
+          "text": "大仙，〔要重的有？〕。",
+          "confidence": "low",
+          "uncertainWords": [
+            "要重的有"
+          ],
+          "rawEvidence": [
+            "535–565 large 11–14：大仙要用力,有",
+            "545–556 small：大仙要重力有"
+          ],
+          "gesture": "offer"
+        },
+        {
+          "start": 4,
+          "end": 6,
+          "text": "〔但非兵器？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "但非兵器"
+          ],
+          "rawEvidence": [
+            "535–565 large 14–16：當飛兵器",
+            "545–556 small：當非低氣"
+          ],
+          "gesture": "refuse"
+        },
+        {
+          "start": 6,
+          "end": 8,
+          "text": "大仙〔听辨中〕",
+          "confidence": "low",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "535–565 large 16–18：大仙作用",
+            "545–556 small：大仙作用"
+          ],
+          "gesture": "point"
+        },
+        {
+          "start": 8,
+          "end": 10.6,
+          "text": "随我去看。",
+          "confidence": "medium",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "535–565 large 18–20：隨我去看",
+            "535–565 small：隨我去看"
+          ],
+          "gesture": "offer"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "545后仅悟空与龙王对场；551/553秒龙王伸手，557秒起身领路；大仙为龙王对悟空称呼。",
+        "machineCandidates": [],
+        "notes": "保持含糊处听辨中，不凭剧情增写宝物名称。"
+      },
+      "gateMode": "turn",
+      "beat": "response"
+    },
+    {
+      "id": "lgdrstaffinvite",
+      "role": "dragon",
+      "section": "guide",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 585.8,
+      "end": 588.4,
+      "title": "指铁请看",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 2.6,
+          "text": "大仙，请看！",
+          "confidence": "medium",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "585–595 small 1–3：大仙 請看",
+            "565–595 large前句：大仙 请看；结束588.4"
+          ],
+          "gesture": "point"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "586秒龙王扬手指向海藏，悟空在旁；称呼大仙与指示动作相符。",
+        "machineCandidates": [],
+        "notes": "去掉565秒起长段器乐，将窗口缩到实际请看近旁。"
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgwkguidequestion",
+      "role": "wukong",
+      "section": "guide",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 588.4,
+      "end": 590.5,
+      "title": "悟空问宝",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 2.1,
+          "text": "哦，这是什么？",
+          "confidence": "medium",
+          "uncertainWords": [
+            "是"
+          ],
+          "rawEvidence": [
+            "565–595 large 23.4–25.52：哦 这什么",
+            "585–595 small 3–5：這什麼"
+          ],
+          "gesture": "inspect"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "588/590秒悟空前趋并扬手观察，龙王指向海藏；这是对龙王请看的反问。",
+        "machineCandidates": [],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgdrstaffpromise",
+      "role": "dragon",
+      "section": "guide",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 590.5,
+      "end": 605.2,
+      "title": "神针来历与许诺",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 4.5,
+          "text": "这个宝贝〔大有来历？〕。",
+          "confidence": "low",
+          "uncertainWords": [
+            "大有来历"
+          ],
+          "rawEvidence": [
+            "565–595 large 25.52–29.44：這個寶貝那有來歷",
+            "585–595 small 5–9：這寶貝 馬有來臨"
+          ],
+          "gesture": "announce"
+        },
+        {
+          "start": 4.5,
+          "end": 7.04,
+          "text": "这是〔禹王治水时？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "禹王治水时"
+          ],
+          "rawEvidence": [
+            "595–625 large 0–2.54：這是漁王火水時",
+            "595–606 small 0–2.7：這身余王大水石"
+          ],
+          "gesture": "point"
+        },
+        {
+          "start": 7.04,
+          "end": 9.88,
+          "text": "留下的定海神针。",
+          "confidence": "medium",
+          "uncertainWords": [
+            "神针"
+          ],
+          "rawEvidence": [
+            "595–625 large 2.54–5.38：留下的定海神聖",
+            "595–606 small 2.7–5.66：留下的定海神針"
+          ],
+          "gesture": "inspect"
+        },
+        {
+          "start": 9.88,
+          "end": 12.3,
+          "text": "大仙，你要是〔拿得动？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "拿得动"
+          ],
+          "rawEvidence": [
+            "595–625 large 5.38–7.8：大仙你要是買動",
+            "595–606 small 5.66–8.16：大仙要是哪裡度"
+          ],
+          "gesture": "offer"
+        },
+        {
+          "start": 12.3,
+          "end": 14.7,
+          "text": "就送给大仙。",
+          "confidence": "medium",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "595–625 large 7.8–10.14：就送給大仙",
+            "595–606 small 8.16–10.42：就送給大仙"
+          ],
+          "gesture": "thanks"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "592–604秒龙王在左侧扬手、指神铁，悟空在右侧观看；以大仙称谓讲述神针并许诺赠送。",
+        "machineCandidates": [],
+        "notes": "禹王治水为模型近音与情节校对初稿，不代表原词人工确认。"
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgwkstafftaken",
+      "role": "wukong",
+      "section": "staff",
+      "trial": 0,
+      "beat": "taken",
+      "file": "museum-original",
+      "start": 625,
+      "end": 632.2,
+      "title": "读棒名与重量",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 7.2,
+          "text": "好！〔如意金箍棒？〕，重〔三万六千斤？〕！",
+          "confidence": "low",
+          "uncertainWords": [
+            "如意金箍棒",
+            "三万六千斤"
+          ],
+          "rawEvidence": [
+            "625–655 small 0–7：好,主意,金,大,重,三萬,六千,幾",
+            "625–655 large 0–7：好,土一千金,八,注三万六千金"
+          ],
+          "gesture": "inspect"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "625秒悟空贴近金箍棒文字位置，630秒开始腾跃取棒；龙王侧立。读器名/重量的角色与该动作一致。",
+        "machineCandidates": [],
+        "notes": "两模型均支持三万六千近音；不替换为原著一万三千五百斤。不称这句已人工听核；源窗只到632.2，不包含645秒真正举起粗棒画面，动作与音频可由网页编排同步。"
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgwkfarewellthanks",
+      "role": "wukong",
+      "section": "farewell",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 670,
+      "end": 673.5,
+      "title": "悟空致谢",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 3.5,
+          "text": "嘿嘿，〔老龙王？〕，俺老孙多谢啦！",
+          "confidence": "medium",
+          "uncertainWords": [
+            "老龙王",
+            "啦"
+          ],
+          "rawEvidence": [
+            "655–685 small 15–18.5：嘿嘿 老李靖 男老师多谢啊",
+            "655–685 large整段：老李靖,俺老孙多谢啊"
+          ],
+          "gesture": "thanks"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "670秒悟空仍在耍棒，672秒转向龙王；自称俺老孙并致谢，角色归属明确。",
+        "machineCandidates": [],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgdrfarewellobjection",
+      "role": "dragon",
+      "section": "farewell",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 673.5,
+      "end": 677.4,
+      "title": "龙王反悔",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 3.9,
+          "text": "这是我〔镇海之宝？〕，〔岂能拿走？〕！",
+          "confidence": "low",
+          "uncertainWords": [
+            "镇海之宝",
+            "岂能拿走"
+          ],
+          "rawEvidence": [
+            "655–685 large：这是我离真的孩子好,皮肤的拿走",
+            "655–685 small 18.5–22.5：这是我一阵子还没老的皮肤的衣服的衣服",
+            "674–686 large 0–3.44：你真的還沒把我皮膚拿走"
+          ],
+          "gesture": "refuse"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "674/676秒龙王上前拦手，对悟空取宝表示异议；下句悟空追问承诺，支持这是龙王的反悔声段。",
+        "machineCandidates": [],
+        "notes": "保留初校疑字，不美化为龙王祝贺或慷慨赠宝。"
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgwkfarewellremind",
+      "role": "wukong",
+      "section": "farewell",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 677.4,
+      "end": 682.6,
+      "title": "悟空追问承诺",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 2.44,
+          "text": "只要我〔拿得动？〕，就送给我。",
+          "confidence": "low",
+          "uncertainWords": [
+            "拿得动"
+          ],
+          "rawEvidence": [
+            "674–686 small 3.4–5.84：只要我拿得過就送給我",
+            "674–686 large 3.44–5.84：只要我拿走就送給我"
+          ],
+          "gesture": "announce"
+        },
+        {
+          "start": 2.44,
+          "end": 5.2,
+          "text": "〔难道？〕你说了不算吗？",
+          "confidence": "low",
+          "uncertainWords": [
+            "难道",
+            "吗"
+          ],
+          "rawEvidence": [
+            "674–686 small 5.84–8.54：誰知道你說了不算嗎",
+            "674–686 large 5.84–9：啥哥 你說了不算了"
+          ],
+          "gesture": "point"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "678/680秒悟空面向龙王，682秒靠近龙王；第一人称拿棒并追问龙王此前承诺，角色语义清楚。",
+        "machineCandidates": [],
+        "notes": ""
+      },
+      "gateMode": "turn"
+    }
+  ],
+  "exclusions": [
+    {
+      "range": [
+        445,
+        458.1
+      ],
+      "reason": "旧large/small识出这算什么兵器，但新模型退化且句界极粗；依root要求不用不确定角色声段。"
+    },
+    {
+      "range": [
+        495,
+        509
+      ],
+      "reason": "large仅好激烈喔、small字幕署名幻觉；不可编成太轻了，也不明确指派角色。"
+    },
+    {
+      "range": [
+        605.2,
+        619.6
+      ],
+      "reason": "两模型对锈迹/法门/棒等词差异大；前半对话初稿不足以逐句确定，暂排除。"
+    },
+    {
+      "range": [
+        694.5,
+        705
+      ],
+      "reason": "掌声/器乐/转暗场，没有选作角色对白。"
+    }
+  ],
+  "legacyClips": [
+    {
+      "id": "lgwk1",
+      "role": "wukong",
+      "section": "arrival",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 428.1,
+      "end": 438.85,
+      "kind": "真人念白 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "模型句界初排，非逐字对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 3.2,
+          "text": "俺老孙就住在花果山上",
+          "confidence": "medium",
+          "uncertainWords": [
+            "就住在"
+          ]
+        },
+        {
+          "start": 3.2,
+          "end": 5.2,
+          "text": "法名孙悟空",
+          "confidence": "low",
+          "uncertainWords": [
+            "法名"
+          ]
+        },
+        {
+          "start": 5.2,
+          "end": 8.16,
+          "text": "只因手中缺少趁手的兵器",
+          "confidence": "medium",
+          "uncertainWords": [
+            "趁手"
+          ]
+        },
+        {
+          "start": 8.16,
+          "end": 10.75,
+          "text": "特地向你来借一件使用",
+          "confidence": "medium",
+          "uncertainWords": [
+            "使用"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lgdr1",
+      "role": "dragon",
+      "section": "arrival",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 60,
+      "end": 73.2,
+      "kind": "真人唱段 · 疑字初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "沿用旧large两句边界67.8秒；新large仅给整段，句界低置信",
+      "lines": [
+        {
+          "start": 0,
+          "end": 7.8,
+          "text": "东海〔太平？〕〔数十载？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "太平",
+            "数十载"
+          ]
+        },
+        {
+          "start": 7.8,
+          "end": 13.2,
+          "text": "〔唯？〕本尊〔乐在怀？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "唯",
+            "乐在怀"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lgwktrialsecond",
+      "role": "wukong",
+      "section": "trial",
+      "trial": 1,
+      "file": "museum-original",
+      "start": 537.4,
+      "end": 541.7,
+      "title": "再试仍嫌轻",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 4.3,
+          "text": "还是轻了，再拿一个〔重的？〕来吧！",
+          "confidence": "medium",
+          "uncertainWords": [
+            "重的"
+          ],
+          "rawEvidence": [
+            "537–543 small 0.5–4.5：還是清了!再拿一個重來吧!",
+            "535–565 large 2–6：還是輕了,再拿一個正宅吧"
+          ],
+          "gesture": "refuse"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "535/537秒悟空持长器腾跃，539/541秒落地并向龙王伸手；句中嫌轻、要求再取符合持器人物，龙王高踞左侧。",
+        "machineCandidates": [],
+        "notes": "语音近音规范清→轻；重的为语境补足，保留疑字。"
+      },
+      "gateMode": "turn"
+    },
+    {
+      "id": "lgdrguide",
+      "role": "dragon",
+      "section": "guide",
+      "trial": 0,
+      "file": "museum-original",
+      "start": 545,
+      "end": 555.6,
+      "title": "引往海藏",
+      "kind": "真人原声 · 唱白未分类 · 字幕初校",
+      "transcriptStatus": "machine-context-draft",
+      "timingStatus": "ASR句界初排，非人工听校或音素对齐",
+      "lines": [
+        {
+          "start": 0,
+          "end": 1,
+          "text": "有了！",
+          "confidence": "medium",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "535–565 large 10–11：有量",
+            "545–556 small：有了…"
+          ],
+          "gesture": "announce"
+        },
+        {
+          "start": 1,
+          "end": 4,
+          "text": "大仙，〔要重的有？〕。",
+          "confidence": "low",
+          "uncertainWords": [
+            "要重的有"
+          ],
+          "rawEvidence": [
+            "535–565 large 11–14：大仙要用力,有",
+            "545–556 small：大仙要重力有"
+          ],
+          "gesture": "offer"
+        },
+        {
+          "start": 4,
+          "end": 6,
+          "text": "〔但非兵器？〕",
+          "confidence": "low",
+          "uncertainWords": [
+            "但非兵器"
+          ],
+          "rawEvidence": [
+            "535–565 large 14–16：當飛兵器",
+            "545–556 small：當非低氣"
+          ],
+          "gesture": "refuse"
+        },
+        {
+          "start": 6,
+          "end": 8,
+          "text": "大仙〔听辨中〕",
+          "confidence": "low",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "535–565 large 16–18：大仙作用",
+            "545–556 small：大仙作用"
+          ],
+          "gesture": "point"
+        },
+        {
+          "start": 8,
+          "end": 10.6,
+          "text": "随我去看。",
+          "confidence": "medium",
+          "uncertainWords": [],
+          "rawEvidence": [
+            "535–565 large 18–20：隨我去看",
+            "535–565 small：隨我去看"
+          ],
+          "gesture": "offer"
+        }
+      ],
+      "evidence": {
+        "roleConfidence": "medium",
+        "roleEvidence": "545后仅悟空与龙王对场；551/553秒龙王伸手，557秒起身领路；大仙为龙王对悟空称呼。",
+        "machineCandidates": [],
+        "notes": "保持含糊处听辨中，不凭剧情增写宝物名称。"
+      },
+      "gateMode": "turn"
+    }
+  ],
+  "stageAdaptation": "舞台精简改编：537.4–541.7秒的悟空再试嫌轻原声移接首刀试毕；545–555.6秒的龙王引路原声接在第二件试器后。保留音频、原词初稿和原片时间，非原片首刀逐字重演。"
+}

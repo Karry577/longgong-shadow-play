@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152e31">
+  <meta name="description" content="一人一台戏：亲手操杆，让孙悟空在皮影戏台上握稳神铁，演出自己的龙宫得宝，并保存与回放。">
+  <title>龙宫得宝 · 一人一台戏</title>
+  <link rel="stylesheet" href="./styles.css?v=0.2.0">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="一人一台戏首页"><span class="brand-seal" aria-hidden="true">影</span><span>一人一台戏<small>掌中有杆，幕上有戏</small></span></a>
+      <div class="episode"><span>首折 · 海藏取棒</span><h1>龙宫得宝</h1></div>
+      <nav aria-label="戏台设置"><button id="sound" class="text-button" aria-pressed="false">声音 关</button><button id="character" class="text-button">影人图鉴</button><button id="backstage" class="text-button" aria-pressed="false">看幕后的杆</button><button id="help" class="icon-button" aria-label="操杆说明">?</button></nav>
+    </header>
+
+    <main>
+      <section class="theatre" aria-label="龙宫得宝互动皮影戏台">
+        <div class="scene-strip"><span class="scene-name"><i></i> 东海 · 水晶宫</span><span id="record-indicator" class="record-indicator">待开演</span><span class="live-time" id="live-time">00:00</span></div>
+        <div class="stage-wrap" id="stage-wrap">
+          <canvas id="stage" width="1280" height="720" tabindex="0" aria-label="可操纵皮影戏台。点击或拖动身体、左手、右手的杆柄。键盘1、2、3选杆，方向键移动，G合握。" aria-describedby="stage-instruction"></canvas>
+          <div class="stage-heading" aria-live="polite"><span class="step-number" id="step-number">壹</span><div><h2 id="step-title">把悟空领到神铁前</h2><p id="stage-instruction">拖动身体杆，向右走近发光的神铁。</p></div></div>
+          <div class="stage-corner" id="view-label">透光前幕</div>
+          <div class="stage-caption" id="stage-caption">悟空：老龙王，听说海藏有件趁手的兵器？</div>
+          <div id="completion" class="completion" hidden><span>神铁随心 · 此折得宝</span><p>你亲手演成了这一棒。</p><button id="watch-complete">看我的演出 ↗</button></div>
+        </div>
+        <div class="performance-desk">
+          <div class="rod-controls" role="group" aria-label="选择操纵杆">
+            <span class="desk-label">执杆</span>
+            <button class="rod-button selected" data-rod="body" aria-pressed="true"><kbd>1</kbd>身体杆</button>
+            <button class="rod-button" data-rod="left" aria-pressed="false"><kbd>2</kbd>左手杆</button>
+            <button class="rod-button" data-rod="right" aria-pressed="false"><kbd>3</kbd>右手杆</button>
+          </div>
+          <div class="grip-controls"><span id="hand-contact" class="contact-summary">双手尚未到位</span><button id="grip" class="primary-button" disabled>握稳神铁 <kbd>G</kbd></button><div class="size-controls" aria-label="神铁尺寸"><button id="smaller" disabled title="合握后让神铁缩小">小些</button><span id="size-label">神铁 · 太长</span><button id="larger" disabled title="合握后让神铁变大">大些</button></div></div>
+        </div>
+      </section>
+
+      <section class="coach-rail" id="coach-rail" aria-label="根据实际操杆动作的AI陪练">
+        <div class="coach-identity"><span class="coach-seal" aria-hidden="true">练</span><div><span class="coach-wordmark">AI 动作陪练</span><button id="model-info" class="model-status" aria-label="查看动作模型与判断依据">本机动作模型 · 载入中</button></div><button id="coach-toggle" class="coach-switch" aria-pressed="true" aria-label="AI动作陪练已开启">开</button></div>
+        <div class="coach-advice"><p id="coach-title" role="status">先移身，手才够得到握点</p><span id="coach-hint">陪练正在读取操杆状态。</span><button id="coach-focus" class="coach-focus">标出要调的杆 ↗</button></div>
+        <div class="coach-measures" aria-label="左右手对位与停稳实测"><div class="hand-measure" id="measure-left"><div><b>左手</b><span id="left-error">未到位</span></div><div class="meter-track"><i id="left-dwell"></i></div><small id="left-stability">停稳 0.00 / 0.28 秒</small></div><div class="hand-measure" id="measure-right"><div><b>右手</b><span id="right-error">未到位</span></div><div class="meter-track"><i id="right-dwell"></i></div><small id="right-stability">停稳 0.00 / 0.28 秒</small></div></div>
+      </section>
+
+      <section class="recording-desk" aria-label="演出记录与回放">
+        <div class="playback-controls"><button id="record-toggle" class="record-button"><span class="record-dot"></span><span id="record-text">开始录制</span></button><button id="play" class="play-button" disabled aria-label="从头回放演出">▶ 回放</button><button id="continue" class="text-button" hidden>从此处续演</button></div>
+        <div class="timeline"><label for="timeline" class="sr-only">回放进度</label><input id="timeline" type="range" min="0" max="1" step="1" value="0" disabled><div class="timeline-meta"><span id="cursor-time">00:00</span><span id="timeline-label">拖杆即开演 · 记录你的每次动作</span><span id="duration">00:00</span></div></div>
+        <div class="file-controls"><button id="save" class="outline-button" disabled>保存演出 ↓</button><button id="files" class="icon-button" aria-label="存档与导入" title="存档与导入">⋯</button></div>
+      </section>
+      <div class="below-stage"><p id="context-tip">拖动幕下的圆形杆柄，影人会随你的手一起动。<span>方向键微调 · 空格暂停 · B 看幕后</span></p><button id="sources" class="text-button">戏从何来 ↗</button></div>
+    </main>
+    <footer><span>操杆陪练版 0.2</span><span>原创数字影人 · 本机动作模型 · 自由操演</span></footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <dialog id="help-dialog" aria-labelledby="help-title"><button class="dialog-close" data-close aria-label="关闭">×</button><p class="eyebrow">开幕前，先认三根杆</p><h2 id="help-title">你的手，就是这场戏的节奏。</h2><ol class="help-steps"><li><b>走近</b><p>拖身体杆向右，让悟空来到神铁旁。也可选中杆后用方向键微调。</p></li><li><b>对准、握稳</b><p>分别拖左右手杆，让两只手进入神铁上的两个光圈，停稳片刻，再按“握稳神铁”或 G。</p></li><li><b>小些、提起</b><p>按一次“小些”调成合手长度，再向上拖身体杆，亲手提起神铁。握持后两手由合握辅助联动。</p></li><li><b>留住这一折</b><p>回放、拖时间轴或从某处续演。保存会下载动作 JSON，并留一份本机存档；可在“⋯”里导入。</p></li></ol><p class="dialog-note">键盘：1 / 2 / 3 选杆，方向键移动，Shift 加速，G 合握，B 看幕后，空格暂停。电脑鼠标或触控笔更易精细操纵；手机支持单指拖杆。</p><button class="primary-button wide" data-close>执杆开演</button></dialog>
+
+  <dialog id="files-dialog" aria-labelledby="files-title"><button class="dialog-close" data-close aria-label="关闭">×</button><p class="eyebrow">演出簿</p><h2 id="files-title">把这一场，留给下次。</h2><div class="archive-list"><button id="restore"><span>打开本机存档</span><small id="saved-meta">尚无手动保存的演出</small></button><button id="import"><span>导入动作文件</span><small>读取本作品导出的 .json 文件</small></button><button id="new-performance"><span>重新开演</span><small>当前演出会先保存在本机，再回到开场</small></button></div><p class="dialog-note">动作记录保存在你的浏览器或下载文件中，不上传服务器。清理浏览器数据会移除本机存档，请下载留存。此版保存的是可再演的动作数据，暂未导出视频。</p><input id="file-input" type="file" accept=".json,application/json" hidden></dialog>
+
+  <dialog id="sources-dialog" aria-labelledby="sources-title"><button class="dialog-close" data-close aria-label="关闭">×</button><p class="eyebrow">戏从何来</p><h2 id="sources-title">借一束灯，演一段取宝。</h2><p>本折取材于《西游记》第三回“海藏”取棒的故事。影人按馆藏猴王头茬、传统分件与雕镂语言原创重绘，取棒前不戴紧箍，不穿得宝后的冠甲。</p><p>造型参考包括猴面侧相的额、眉、眼、嘴结构，平涂勾线、薄皮透光和随服饰组织的镂空纹样。各地皮影造型有差异，本版不宣称是某个地方流派的标准影人，也未取得传承人审定。</p><a href="https://zh.wikisource.org/zh/西遊記/第003回" target="_blank" rel="noopener">《西游记》第三回原文 ↗</a><a href="https://www.expo-museum.cn/sbbwg/n281/n282/n330/n331/u1ai28353.html" target="_blank" rel="noopener">世博会博物馆：皮影角色造型与孙悟空实物 ↗</a><a href="https://collections.culture.tw/Object?RNO=MTEyMDEyMDIwMjc%3D&amp;SYSUID=17" target="_blank" rel="noopener">国立传统艺术中心：孙悟空头茬典藏记录 ↗</a><a href="https://www.ihchina.cn/Article/Index/detail?id=28225" target="_blank" rel="noopener">中国非遗网：中国皮影戏形态构成研究 ↗</a><p class="dialog-note">馆藏图片仅用于造型研究，未裁切嵌入作品。舞台人物、纹样及声音为本原型原创数字绘制与合成。</p></dialog>
+
+  <dialog id="model-dialog" aria-labelledby="model-title"><button class="dialog-close" data-close aria-label="关闭">×</button><p class="eyebrow">陪练如何看见你的动作</p><h2 id="model-title">先读动作，再给调整。</h2><p>本机动作模型读取最近 1.2 秒的真实轨迹：左右手离握点多远、移动速度、来回反向、停稳进度及手臂可达范围。训练过的轻量神经网络识别动作状态，坐标与握持规则校验提示事实。没有聊天框，也不代替你操杆。</p><div class="model-evidence"><span>动作模型初判</span><b id="model-prediction">正在载入</b><small id="model-confidence">尚未运行推理</small><p id="model-decision">等待实际动作核验</p><p id="model-facts">等待动作状态</p></div><p>箭头指向当前真实握点；左右手停稳条来自实际接触时间。握点中心还超出手臂可达范围时，即便触到圈边，也需先移身。合握后双手由现有辅助联动，因此不会编造“握住后滑脱”的判断。回放时会读取保存的动作重新分析。</p><p class="dialog-note">模型在模拟操杆轨迹上训练，尚无真人操演或传承人标注数据验证。它适用于本网页的对位与提棒练习，不评判传统皮影表演功底。轨迹和推理均留在本机，不调用付费API。</p></dialog>
+
+  <dialog id="character-dialog" class="character-dialog" aria-labelledby="character-title"><button class="dialog-close" data-close aria-label="关闭">×</button><p class="eyebrow">一张皮，十一件身段</p><h2 id="character-title">猴王影人 · 海藏取棒前</h2><canvas id="character-study" width="900" height="700" aria-label="原创猴王皮影放大图，显示猴面刻线、服纹镂空和分件铆钉"></canvas><div class="study-controls"><button id="study-backstage" class="outline-button" aria-pressed="false">查看分件关节</button><span>原创绘制 · 馆藏造型研究</span></div><p>侧面猴脸、平面皮片叠接、阴阳刻线与透光纹样共同构成影人。头、身、臂、腿分开绘制，握点与操杆实时相连；图鉴可放大看细节。</p></dialog>
+  <script type="module" src="./legacy-app.js?v=0.2.1"></script>
+</body>
+</html>

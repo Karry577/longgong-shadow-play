@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>真人唱腔录音包 · 龙宫得宝</title><style>body{max-width:850px;margin:50px auto;padding:0 22px;background:#132c2e;color:#d9d1b1;font:16px/1.9 system-ui}a{color:#e4bf79}h1,h2{font-family:serif}pre{background:#0a1d20;padding:22px;overflow:auto;font-size:13px}small{color:#9fb29c}</style>
+<a href="./">← 回到戏台</a><h1>真人唱腔录音包</h1><p>这是接入规范，尚无随站发布并核验通过的悟空、龙王真人唱腔。清单由提供者声明；校验通过仅表示格式和文件能用，不代表录音已确权、演唱者身份或地方声腔已获认证。</p>
+<h2>录音与原词一起交付</h2><p>在“真人接唱”同时选择一个UTF-8 JSON清单及它引用的音频文件。总文件不超过100MiB，清单不超过256KiB，最多30段，所有切段总时长不超过90秒。使用MP3、OGG、WAV、M4A、WebM或FLAC。支持当前浏览器实际能解码的格式；录音时长也会在装载时核对。</p>
+<p>录音只在当前页面本地使用，刷新后重新装载。合演JSON保存动作，不包含录音包和录音授权；回放须另行装载同一包，换包可能改变声画对齐，不视为原表演声音的存档。</p>
+<h2>清单字段</h2><p>以下为格式示意，空白身份与授权字段必须补成可核对的真实资料，不能直接作为正式录音包。字幕须转写原唱实际内容；不得把新编词配在无关的原声上。</p>
+<pre>{
+  "format": "yiren-shadow-vocals", "version": 1,
+  "title": "填写剧目与版本", "tradition": "填写皮影声腔流派",
+  "performer": "填写实际演唱者", "sourceUrl": "https://填写原始来源",
+  "rights": {
+    "license": "填写真实许可标识", "holder": "填写权利人",
+    "url": "https://填写该录音许可证据页"
+  },
+  "clips": [{
+    "id": "arrival-wukong", "role": "wukong",
+    "section": "arrival", "trial": 0,
+    "file": "wukong.mp3", "start": 12.4, "end": 21.8,
+    "lines": [{ "start": 0, "end": 4.2, "text": "填写原唱实词" }]
+  }]
+}</pre>
+<p><code>start/end</code>在段落层为原录音中的绝对秒数，在<code>lines</code>中为从该切段起点计算的相对秒数。字幕按实际媒体时钟显示，区间采用左闭右开；字幕之间可留停顿，不能重叠或越出切段。一个角色在一个场次只能配置一个切段。</p>
+<p>角色：<code>wukong</code>悟空、<code>dragon</code>龙王。场次：<code>arrival</code>访宫、<code>request</code>借器、<code>trial</code>试器、<code>guide</code>指铁、<code>staff</code>得宝、<code>farewell</code>辞宫。仅试器场次使用<code>trial:0</code>第一件刀形器与<code>trial:1</code>第二件长柄器，其余场次为0。</p>
+<p>片段可选 <code>gateMode:"turn"</code>：整段开口前对准停稳，字幕换句连续唱白；省略或填 <code>"phrase"</code> 保持逐句等候。设置 <code>order:"source"</code> 后按清单顺序接演，同角色同场允许多段。</p><h2>审核后才能称为正式唱腔版</h2><ol><li>核对原始录音、实际演唱者、流派、原剧角色与本剧改编关系。</li><li>核对录音及表演、词曲的使用许可是否覆盖公开传播、切段、同步配演。文件下载入口和网页文字许可不能代替音轨许可。</li><li>逐句听辨原词、保留方言与拖腔，记录每句的起止秒数，由另一人独立复核。</li><li>核对悟空和龙王的角色语义及应答顺序；非原角色唱段须明确标注重新配演，不冒称原版角色唱腔。</li><li>实听声画同步，核查停稳接唱、暂停续唱、逐句高亮和合演回放。</li></ol>
+<p>解析器当前接收清单中声明的<code>CC0-1.0</code>、<code>CC-BY-4.0</code>、<code>CC-BY-SA-4.0</code>、<code>CC-BY-NC-4.0</code>、<code>CC-BY-NC-SA-4.0</code>。NC素材限符合非商业条款的使用，SA素材须遵守相同方式共享；ND或未知许可不通过导入。专门书面许可需先由项目维护者核对范围，再按证据接入，不能自行填成CC许可。</p>
+<h2>已查到的最强公开候选</h2><p><a href="https://ecommons.cornell.edu/entities/publication/51cf255c-3bd4-4892-b1d9-0a3d1a0c2085">康奈尔大学：吴蛮与华阴皮影乐队精华录像</a>明示CC BY-NC-SA 4.0，但不是已转写并对齐的《龙宫得宝》唱段，其SRT仅含英文访谈，不能直接作为悟空、龙王词轴。</p><small>2026年10月18日。v0.6默认已引用唐山原片中的龙王实唱和悟空韵白，无需导入。本页只规定自有许可的本地资料包，不能用它将未获CC许可的馆藏伪报成开放音频；音乐、字词和权利审核仍须分别完成。</small></html>
